@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     echo "Building Docker Image..."
-                    bat "docker build -t ${ImageRegistry}/${JOB_NAME}:${BUILD_NUMBER} -f docker-project-phpcontactform/Dockerfile ."
+                    bat "docker build -t ${ImageRegistry}/${JOB_NAME}:${BUILD_NUMBER} docker-project-phpcontactform"
                 }
             }
         }
